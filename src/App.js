@@ -6,6 +6,7 @@ import Programs from './components/Programs'
 function App() {
   const [link , setLink] = useState({url : 'https://api.spacexdata.com/v3/launches?limit=100'})
   const [programs , setPrograms] = useState([])
+  const API = link.url
   
   // fetch programs from json
   const fetchPrograms = async (Url) => {
@@ -19,7 +20,7 @@ function App() {
   //  to show something as the page loads
   useEffect(() => {
     const getPrograms = async () => {
-      const programsfromserver = await fetchPrograms(link.url)
+      const programsfromserver = await fetchPrograms(API)
       setPrograms(programsfromserver)
     }
 
@@ -30,7 +31,7 @@ function App() {
   //changing the link on selecting filter
   const toggleFilter = async(status , text) => {
     var substring = text.data
-    var Url = link.url
+    var Url = API
     var newUrl
 
     if(status === false){
@@ -51,7 +52,7 @@ function App() {
   const updateYear= async(text , year) => {
     var yr = String(year)
     var substring = text.data
-    var Url = link.url
+    var Url = API
     var newUrl
     var i
     var already_present
