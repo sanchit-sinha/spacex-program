@@ -1,8 +1,7 @@
 {
-    "link":[
+    "link":
         {
             "id" : 1,
             "url" : "https://api.spacexdata.com/v3/launches?limit=100"
         }
-    ]
 }
