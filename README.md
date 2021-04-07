@@ -14,25 +14,29 @@ Multiple filters can also be applied at a time.
 The information from the json data was fetched using the fetch() API of react. This data was then displayed on the client side in tables with the help of useState Hooks of react.
 The filtering of data was achieved by triggering function calls on choosing the respective filter options and adding key value pairs to the original url to display the desired data. Multiple filtering was achieved by adding key value pairs over the previous url with some checks to prevent creation of wrong urls.
 
-<b> ORIGINAL URL</b>
+<b> ORIGINAL URL</b>  
 (a) "https://api.spacexdata.com/v3/launches?limit=100"  
         - Will used to display all the launch details from mission number - 1 to 100
 
-<b> EXAMPLES OF URL CHANGE ON APPLYING FILTER</b> 
-(b) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true"
-        - Will be used to display all the successful launches
-(c) "https://api.spacexdata.com/v3/launches?limit=100land_success=true"
-        - Will be used to display all the successful landings
-(d) "https://api.spacexdata.com/v3/launches?limit=100&launch_year=2014"
-        - Will be used to display all the launches in the year 2004
+<b> EXAMPLES OF URL CHANGE ON APPLYING FILTER</b>   
+(b) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true"  
+        - Will be used to display all the successful launches  
+     
+(c) "https://api.spacexdata.com/v3/launches?limit=100land_success=true"  
+        - Will be used to display all the successful landings  
+      
+(d) "https://api.spacexdata.com/v3/launches?limit=100&launch_year=2014"  
+        - Will be used to display all the launches in the year 2004  
+  
+ 
+<b> EXAMPLES OF URL CHANGE ON MULTIPLE FILTERING</b>  
+(e) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true"  
+        - Will be used to display all the successful launches that landed successfully. 
+        
+(f) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014"  
+        - Will be used to display all the successful launches that landed successfully in the year 2004  
 
-<b> EXAMPLES OF URL CHANGE ON MULTIPLE FILTERING</b>
-(e) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true"
-        - Will be used to display all the successful launches that landed successfully.
-(f) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014"
-        - Will be used to display all the successful launches that landed successfully in the year 2004
-
-
+  
 ## WEB-APP
 (i) Original display of webapp
 <img src = "image/original.png"> 
