@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState , useEffect } from 'react'
+import Header from './components/Header'
+import Programs from './components/Programs'
+
 
 function App() {
+  const [link , setLink] = useState('https://api.spacexdata.com/v3/launches?limit=100')
+  const [programs , setPrograms] = useState([])
+  
+  // fetch programs from json
+  const fetchPrograms = async () => {
+    const url = link
+    const res = await fetch(url)
+    const data = await res.json()
+
+    // console.log(data)
+    return data
+  }
+
+  //  to show something as the page loads
+  useEffect(() => {
+    const getPrograms = async () => {
+      const programsfromserver = await fetchPrograms()
+      setPrograms(programsfromserver)
+    }
+
+    getPrograms()
+  } , [])
+
+
+  //changing the link on selecting filter
+  const toggleFilter = (status , text) => {
+    var substring = text.data
+    if(status === true){
+      var newLink = link + substring
+      setLink(newLink)
+    }
+    else{
+      var newLink = link.replace(substring,'')
+      setLink(newLink)
+    }
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header onToggle = {toggleFilter}/>
+      {programs.length > 0 ? <Programs programs = {programs}/> : 'No Data To Show'}
     </div>
   );
 }
