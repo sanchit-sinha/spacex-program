@@ -45,7 +45,7 @@ The filtering of data was achieved by triggering function calls on choosing the 
 <img src = "image/filter_options.png>    
 
 <b>(iii) Using Single Filter</b>  
-<img src = "image/applying_single_filter.png>  
+<img src = "https://github.com/sanchit-sinha/spacex-program/blob/master/image/applying_single_filter.png?raw=true" >
 
 <b>(iv) Multiple Filters</b>  
 <img src = "image/multiple_filter1.png">  
