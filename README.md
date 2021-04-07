@@ -42,7 +42,7 @@ The filtering of data was achieved by triggering function calls on choosing the 
 <img src = "image/original.png">   
 
 <b>(ii) Filter Options of Web app</b>  
-<img src = "image/filter_options.png>    
+<img src = "https://github.com/sanchit-sinha/spacex-program/blob/master/image/filter_options.png?raw=true">    
 
 <b>(iii) Using Single Filter</b>  
 <img src = "https://github.com/sanchit-sinha/spacex-program/blob/master/image/applying_single_filter.png?raw=true" >
