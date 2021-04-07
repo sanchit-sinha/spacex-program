@@ -1,18 +1,18 @@
 # SPACEX DATA
-### This webapp has been hosted over heroku and you can find it over here <a href = "https://space-xinfo.herokuapp.com/"> ~Link </a> 
+### This web app has been hosted over Heroku and you can find it over here <a href = "https://space-xinfo.herokuapp.com/"> ~Link </a> 
 
 ## ABOUT THE WEBAPP
 This webapp has been built using REACT JS and displays all of the launches by SpaceX program from the following json data(<a href = "https://api.spacexdata.com/v3/launches?limit=100"> Data </a>).
 
-It also contains the following filters which can be applied inorder to filter the data -
+It also contains the following filters which can be applied in order to filter the data -
 i) Successful Launch : This filters the data on the basis of successful launches  
 ii) Successful Landing : This filters the data on the basis of successful landings  
 iii) Year: Filter the data to see all the launches in a particular year
 Multiple filters can also be applied at a time. 
 
 ## APPROACH
-The information from the json data was fetched using the fetch() API of react. This data was then displayed on the client side in tables with the help of useState Hooks of react.
-The filtering of data was achieved by triggering function calls on choosing the respective filter options and adding key value pairs to the original url to display the desired data. Multiple filtering was achieved by adding key value pairs over the previous url with some checks to prevent creation of wrong urls.
+The information from the JSON data was fetched using the fetch() API of react. This data was then displayed on the client-side in tables with the help of useState Hooks of react.
+The filtering of data was achieved by triggering function calls on choosing the respective filter options and adding key value pairs to the original url to display the desired data. Multiple filtering was achieved by adding key-value pairs over the previous url with some checks to prevent the creation of wrong URLs.
 
 <b> ORIGINAL URL</b>  
 (a) "https://api.spacexdata.com/v3/launches?limit=100"  
