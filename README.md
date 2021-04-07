@@ -51,3 +51,7 @@ The filtering of data was achieved by triggering function calls on choosing the 
 <img src = "image/multiple_filter1.png">  
 <img src = "image/multiple_filter2.png">  
 
+
+## Features to be Added :   
+(i) Rendering the page with applied filter on refreshing the page  
+  
