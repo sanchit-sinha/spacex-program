@@ -1,5 +1,5 @@
 # SPACEX DATA
-### This webapp has been hosted over heroku and uou can find it over here <a href = "https://space-xinfo.herokuapp.com/"> ~Link </a> 
+### This webapp has been hosted over heroku and you can find it over here <a href = "https://space-xinfo.herokuapp.com/"> ~Link </a> 
 
 ## ABOUT THE WEBAPP
 This webapp has been built using REACT JS and displays all of the launches by SpaceX program from the following json data(<a href = "https://api.spacexdata.com/v3/launches?limit=100"> Data </a>).
@@ -38,16 +38,16 @@ The filtering of data was achieved by triggering function calls on choosing the 
 
   
 ## WEB-APP
-(i) Original display of webapp
-<img src = "image/original.png"> 
+<b>(i) Original display of webapp</b>
+<img src = "image/original.png">   
 
-(ii) Filter Options of Web app
-<img src = "image/filter_options.png>
+<b>(ii) Filter Options of Web app</b>  
+<img src = "image/filter_options.png>    
 
-(iii) Using Single Filter
-<img src = "image/applying_single_filter.png>
+<b>(iii) Using Single Filter</b>  
+<img src = "image/applying_single_filter.png>  
 
-(iv) Multiple Filters
-<img src = "image/multiple_filter1.png">
-<img src = "image/multiple_filter2.png">
+<b>(iv) Multiple Filters</b>  
+<img src = "image/multiple_filter1.png">  
+<img src = "image/multiple_filter2.png">  
 
