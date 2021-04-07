@@ -1,6 +1,7 @@
 import Filter from './Filter'
+import Year from './Year'
 
-const Header = ({title , onToggle}) => {
+const Header = ({title , onToggle , changeYear}) => {
     return (
         <header className = 'header'>
             <h1 className = "text-center">{title}</h1>
@@ -9,8 +10,9 @@ const Header = ({title , onToggle}) => {
                 <span className="caret"></span></button>
                 <ul className="dropdown-menu px-4 bg-info bg-gradient">
                     {/* <li><Filter onToggle = {onToggle} data = "" text="View All" /></li> */}
-                    <li><Filter onToggle = {onToggle} data = "&land_success=true" text="Successful Landing" /></li>
                     <li><Filter onToggle = {onToggle} data = "&launch_success=true" text="Successful Launch" /></li>
+                    <li><Filter onToggle = {onToggle} data = "&land_success=true" text="Successful Landing" /></li>
+                    <li><Year text="Year" data = "&launch_year=" changeYear = {changeYear} /></li>
                 </ul>
             </div>
             
