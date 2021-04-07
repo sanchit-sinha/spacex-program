@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# SPACEX DATA
+### This webapp has been hosted over heroku and uou can find it over here <a href = "https://space-xinfo.herokuapp.com/"> ~Link </a> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ABOUT THE WEBAPP
+This webapp has been built using REACT JS and displays all of the launches by SpaceX program from the following json data(<a href = "https://api.spacexdata.com/v3/launches?limit=100"> Data </a>).
 
-## Available Scripts
+It also contains the following filters which can be applied inorder to filter the data -
+i) Successful Launch : This filters the data on the basis of successful launches  
+ii) Successful Landing : This filters the data on the basis of successful landings  
+iii) Year: Filter the data to see all the launches in a particular year
+Multiple filters can also be applied at a time. 
 
-In the project directory, you can run:
+## APPROACH
+The information from the json data was fetched using the fetch() API of react. This data was then displayed on the client side in tables with the help of useState Hooks of react.
+The filtering of data was achieved by triggering function calls on choosing the respective filter options and adding key value pairs to the original url to display the desired data. Multiple filtering was achieved by adding key value pairs over the previous url with some checks to prevent creation of wrong urls.
 
-### `npm start`
+<b> ORIGINAL URL</b>
+(a) "https://api.spacexdata.com/v3/launches?limit=100"  
+        - Will used to display all the launch details from mission number - 1 to 100
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<b> EXAMPLES OF URL CHANGE ON APPLYING FILTER</b> 
+(b) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true"
+        - Will be used to display all the successful launches
+(c) "https://api.spacexdata.com/v3/launches?limit=100land_success=true"
+        - Will be used to display all the successful landings
+(d) "https://api.spacexdata.com/v3/launches?limit=100&launch_year=2014"
+        - Will be used to display all the launches in the year 2004
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<b> EXAMPLES OF URL CHANGE ON MULTIPLE FILTERING</b>
+(e) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true"
+        - Will be used to display all the successful launches that landed successfully.
+(f) "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=2014"
+        - Will be used to display all the successful launches that landed successfully in the year 2004
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## WEB-APP
+(i) Original display of webapp
+<img src = "image/original.png"> 
 
-### `npm run build`
+(ii) Filter Options of Web app
+<img src = "image/filter_options.png>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(iii) Using Single Filter
+<img src = "image/applying_single_filter.png>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+(iv) Multiple Filters
+<img src = "image/multiple_filter1.png">
+<img src = "image/multiple_filter2.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
