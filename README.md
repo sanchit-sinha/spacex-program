@@ -53,6 +53,6 @@ The filtering of data was achieved by triggering function calls on choosing the 
 
 
 ## Features to be Added :   
-~~(i) Rendering the page with applied filter on refreshing the page~~
+~~(i) Rendering the page with applied filter on refreshing the page~~  
         Implemented this by saving the url in local storage and retrieving it everytime the page loads
   
