@@ -1,7 +1,7 @@
-const Button = ({text}) => {
+const Button = ({text , onReset}) => {
     return (
         <div>
-            <button className = 'btn btn-block bg-warning'>{text}</button>
+            <button onClick={onReset} className = 'btn btn-block bg-warning'>{text}</button>
         </div>
     )
 }

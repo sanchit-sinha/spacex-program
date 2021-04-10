@@ -1,8 +1,9 @@
-const Filter = ({text , data , onToggle}) => {
+const Filter = ({text , data , onToggle, status}) => {
+    // console.log(text , status)
     return (
         <div className = 'form-control-check'>
             <label className = "text-white" style = {FilterStyle} >{text}</label>
-            <input type = 'checkbox' onClick = {(e) => onToggle(e.currentTarget.checked , {data})} value = {data}  ></input>
+            <input type = 'checkbox' onChange = {(e) => onToggle(e.currentTarget.checked , {data})} value = {data} checked={status} />
         </div>
     )
 }
